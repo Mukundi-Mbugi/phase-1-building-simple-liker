@@ -2,7 +2,19 @@
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
-// Your JavaScript code goes here!
+const likerHearts=document.getElementsByClassName('like-glyph')
+// console.log(likerHeart)
+for(let likerHeart of likerHearts){
+  likerHeart.addEventListener('click',mimicServerCall=>{
+    if(likerHeart.classList.contains('activated-heart')){
+      likerHeart.classList.remove('activated-heart');
+    } 
+    else{
+      likerHeart.classList.add('activated-heart')
+    }
+       
+  })
+}
 
 
 
